@@ -1884,12 +1884,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 /* CSS for PDF */
 /* PDF container styling */
 .pdf-container {
-  position: relative; 
-  width: 100%;
-  padding-bottom: 100%;  
-  height: 0;
-  overflow: hidden;
   margin-top: 40px;
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
   margin-bottom: 20px;
 }
 
@@ -1921,6 +1920,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .pdf-container {
-      padding-bottom: 75%; /* 4:3 aspect ratio for smaller screens */
+    height: 100vh; /* 4:3 aspect ratio for smaller screens */
   }
 }
